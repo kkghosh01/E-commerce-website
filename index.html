@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>E-store</title>
+  </head>
+  <body>
+    <!-- Header & nav section -->
+    <header id="main-header">
+      <nav>
+        <div>
+          <a href="#"><img src="./img/logo.png" alt="" /></a>
+        </div>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Category</a></li>
+            <li><a href="#">Products</a></li>
+          </ul>
+          <div class="search">
+            <button type="submit" class="btn">
+              <i class="fas fa-search"></i>
+            </button>
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+        <div class="user">
+          <div>
+            <select name="language" id="language">
+              <option value="en">En</option>
+              <option value="es">Es</option>
+              <option value="fr">Fr</option>
+              <option value="de">De</option>
+            </select>
+          </div>
+          <div>
+            <a href="#" class="sign-up-btn">Sign up</a>
+            <a href="#" class="login-btn">Login</a>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero section -->
+
+    <section class="hero">
+      <div class="hero-image">
+        <img src="./img/hero.png" alt="Hero Image" />
+        <div class="hero-overlay">
+          <h1>Welcome to Our E-store</h1>
+          <p>Discover the best products at unbeatable prices!</p>
+          <a href="#" class="btn">Shop Now</a>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Products section -->
+    <section class="featured-products">
+      <div class="featured-header">
+        <h2>Browse by category</h2>
+        <div>
+          <button><i class="fas fa-chevron-left"></i></button>
+          <button><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="./img/product-img/product2.jpg" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p>$19.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="./img/product-img/product1.jpg" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>$29.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="./img/product-img/product3.jpg" alt="Product 3" />
+          <h3>Product 3</h3>
+          <p>$39.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="./img/product-img/product2.jpg" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p>$19.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="./img/product-img/product1.jpg" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>$29.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="./img/product-img/product1.jpg" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>$29.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="./img/product-img/product3.jpg" alt="Product 3" />
+          <h3>Product 3</h3>
+          <p>$39.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    <!-- new arrival section -->
+
+    <section class="new-arrivals-section">
+      <h2>New arrival</h2>
+      <div class="new-arrival-grid">
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 1.jpg"
+            alt="New Arrival 1"
+          />
+          <span class="discount">20% OFF</span>
+          <h3>New Arrival 1</h3>
+          <p>$24.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 2.jpg"
+            alt="New Arrival 2"
+          />
+          <h3>New Arrival 2</h3>
+          <p>$34.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 3.jpg"
+            alt="New Arrival 3"
+          />
+          <h3>New Arrival 3</h3>
+          <p>$44.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 4.jpg"
+            alt="New Arrival 3"
+          />
+          <span class="discount">20% OFF</span>
+          <h3>New Arrival 4</h3>
+          <p>$44.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 5.jpg"
+            alt="New Arrival 3"
+          />
+          <h3>New Arrival 5</h3>
+          <p>$44.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 6.jpg"
+            alt="New Arrival 3"
+          />
+          <h3>New Arrival 6</h3>
+          <p>$44.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 7.jpg"
+            alt="New Arrival 3"
+          />
+          <h3>New Arrival 7</h3>
+          <p>$44.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 8.jpg"
+            alt="New Arrival 3"
+          />
+          <h3>New Arrival 8</h3>
+          <p>$44.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 9.jpg"
+            alt="New Arrival 3"
+          />
+          <h3>New Arrival 9</h3>
+          <p>$44.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 10.jpg"
+            alt="New Arrival 3"
+          />
+          <h3>New Arrival 10</h3>
+          <p>$44.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 1.jpg"
+            alt="New Arrival 1"
+          />
+          <h3>New Arrival 11</h3>
+          <p>$24.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 2.jpg"
+            alt="New Arrival 2"
+          />
+          <h3>New Arrival 12</h3>
+          <p>$34.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 9.jpg"
+            alt="New Arrival 3"
+          />
+          <h3>New Arrival 13</h3>
+          <p>$44.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="./img/new-product-img/new product 2.jpg"
+            alt="New Arrival 2"
+          />
+          <h3>New Arrival 14</h3>
+          <p>$34.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    <section class="product-banner">
+      <img src="./img/product-banner-img/product-banner.png" alt="" />
+    </section>
+    <!-- top rated product -->
+    <section class="top-rated-products">
+      <h2>Top Rated Products</h2>
+      <div class="top-rated-grid">
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 1.jpg"
+            alt="Top Rated 1"
+          />
+          <h3>Top Rated 1</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$49.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 2.jpg"
+            alt="Top Rated 2"
+          />
+          <h3>Top Rated 2</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$59.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 4.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 5.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 6.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 7.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 8.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 9.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 10.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 6.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 4.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 3.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 1.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="top-rated-card">
+          <img
+            src="./img/new-product-img/new product 5.jpg"
+            alt="Top Rated 3"
+          />
+          <h3>Top Rated 3</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>$69.99</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer section -->
+    <section>
+      <div class="tag-lines">
+        <div class="professional">
+          <i class="fa-solid fa-user-tie"></i>
+          <h3>Professional Service</h3>
+          <p>Efficient customer from passionate team</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-star"></i>
+          <h3>Quality Products</h3>
+          <p>We offer the best quality products in the market</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-headset"></i>
+          <h3>24/7 Support</h3>
+          <p>We are here to help you anytime, anywhere</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-lock"></i>
+          <h3>Secure Payment</h3>
+          <p>Your payment information is safe with us</p>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-content">
+          <div class="footer-card">
+            <a href="#"><img src="./img/logo-white.png" alt="" /></a>
+            <div class="news-letter-subscription">
+              <h3>Subscribe to our Newsletter</h3>
+              <p>Get the latest updates and offers</p>
+              <form action="#">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit" class="btn">Subscribe</button>
+              </form>
+            </div>
+            <div class="social-media">
+              <ul>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-card support">
+            <h3>Suport</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-card legal">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Accessibility Statement</a></li>
+            </ul>
+          </div>
+          <div class="footer-card contact">
+            <h3>Contact</h3>
+            <div class="address">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>123 E-store St, Shop City, SC 12345</p>
+            </div>
+            <div class="phone">
+              <i class="fa-solid fa-phone"></i>
+              <p>+1 (123) 456-7890</p>
+            </div>
+            <div class="email">
+              <i class="fa-solid fa-envelope"></i>
+              <p>help@estore.com</p>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">
+          Copyright &copy;2025 e-store. All rights reserved
+        </p>
+      </footer>
+    </section>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
