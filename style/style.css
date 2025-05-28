@@ -146,6 +146,14 @@ ul a:focus {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   background: #eaf6ea; /* fallback color */
   margin-top: 100px;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: transform 0.25s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+}
+
+.hero.in-view {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .hero-image {
@@ -159,20 +167,29 @@ ul a:focus {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 50%;
-  left: 30%;
+  top: 30%;
+  left: 20%;
   transform: translate(-50%, -50%);
   color: #222;
-  background: rgba(255, 255, 255, 0.85); /* semi-transparent background */
+  background: rgba(255, 255, 255, 0.85);
   padding: 24px 36px;
   border-radius: 12px;
   max-width: 350px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 0.25s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+}
+
+.hero-overlay.in-view {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .hero-overlay h1 {
@@ -250,7 +267,7 @@ ul a:focus {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.8rem;
+  gap: 1.2rem;
   margin: auto;
 }
 
@@ -260,7 +277,18 @@ ul a:focus {
   border-radius: 10px;
   padding: 0.5rem 0.5rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.15s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+}
+
+.product-card:hover {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card.in-view:hover {
+  transform: translateY(0) scale(1.05);
 }
 
 .product-card img {
@@ -294,7 +322,7 @@ ul a:focus {
 .new-arrival-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.8rem;
+  gap: 1.2rem;
   margin: auto;
 }
 
@@ -305,7 +333,20 @@ ul a:focus {
   border-radius: 10px;
   padding: 0.5rem 0.5rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.15s ease-out;
+}
+
+.product-card.in-view,
+.new-arrival-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.new-arrival-card:hover {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .new-arrival-card .favourite-icon {
   position: absolute;
@@ -356,10 +397,33 @@ ul a:focus {
   max-width: 90%;
   margin: 2rem auto;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  background-color: #eaf6ea; /* fallback color */
+  padding: 1rem;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: transform 0.25s ease, box-shadow 0.1s ease, opacity 0.1s ease;
 }
+.product-banner.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .product-banner img {
   width: 1100px;
   border-radius: 10px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-banner img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .top-rated-products {
@@ -376,7 +440,7 @@ ul a:focus {
 .top-rated-products .top-rated-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 0.8rem;
+  gap: 1.2rem;
   margin: auto;
 }
 
@@ -386,7 +450,19 @@ ul a:focus {
   border-radius: 10px;
   padding: 0.5rem 0.5rem;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.15s ease-out;
+}
+
+.top-rated-products .top-rated-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.top-rated-products .top-rated-card:hover {
+  transform: translateY(0) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .top-rated-products .top-rated-card img {
@@ -418,6 +494,13 @@ ul a:focus {
   max-width: 90%;
   margin: 4rem auto 1rem;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.25s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+}
+.tag-lines.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .tag-lines i {
@@ -457,6 +540,14 @@ footer {
 }
 .footer-card {
   color: #fff;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 0.25s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+}
+
+.footer-card.in-view {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .footer-card .news-letter-subscription {
