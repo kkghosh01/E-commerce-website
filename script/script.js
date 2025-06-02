@@ -1,4 +1,6 @@
 import observeOnScroll from "./scrollObserver.js";
+const menuIcon = document.querySelector(".nav-links i");
+const navMenu = document.querySelector(".nav-links ul");
 
 let prevScrollPos = window.pageYOffset;
 const header = document.getElementById("main-header");
@@ -37,9 +39,6 @@ observeOnScroll({
   stagger: true,
 });
 
-const menuIcon = document.querySelector(".nav-links i");
-const navMenu = document.querySelector(".nav-links ul");
-
 menuIcon.addEventListener("click", (e) => {
   e.stopPropagation();
   navMenu.classList.toggle("active");
@@ -48,23 +47,5 @@ menuIcon.addEventListener("click", (e) => {
 document.addEventListener("click", (e) => {
   if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
     navMenu.classList.remove("active");
-  }
-});
-
-const mobileSearchBtn = document.querySelector(".mobile-search-btn");
-const mobileSearchInput = document.querySelector(".mobile-search-input");
-
-mobileSearchBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  mobileSearchInput.classList.toggle("active");
-});
-
-// Optional: Close on outside click
-document.addEventListener("click", (e) => {
-  if (
-    !mobileSearchInput.contains(e.target) &&
-    !mobileSearchBtn.contains(e.target)
-  ) {
-    mobileSearchInput.classList.remove("active");
   }
 });
