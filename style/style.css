@@ -17,123 +17,132 @@ h1 {
 }
 header {
   position: fixed;
-  width: 100%;
   top: 0;
-  z-index: 999;
+  width: 100%;
   background-color: #fff;
-  padding: 1rem;
-  text-align: center;
-  height: 80px;
-  margin: auto;
+  padding: 1rem 2rem;
   border-bottom: 1px solid #ccc;
+  z-index: 999;
+}
+.header-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
 
-header img {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
   width: 100px;
 }
-nav {
-  width: 95%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-}
 
-nav .nav-bar {
+.nav-links ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 2rem;
-}
-
-nav ul {
-  display: flex;
   list-style: none;
-  gap: 1rem;
 }
 
-a {
+.nav-links ul.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem 0;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.nav-links i {
+  display: none;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #000;
+  font-weight: 500;
 }
 
-ul a:hover,
-ul a:focus {
+.nav-links a:hover {
   color: #5daa69;
 }
-.user {
+
+.header-right {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-.user select {
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.user select option {
-  background-color: #5daa69;
-  color: #333;
-}
 .search {
   display: flex;
-  justify-content: start;
   align-items: center;
   gap: 0.5rem;
   background-color: #dfeee1;
-  border: none;
-  padding: 0.5rem 1rem;
   border-radius: 1.5rem;
-  width: 400px;
-}
-
-.search .btn {
-  background-color: transparent;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.search .btn i {
-  background-color: transparent;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
+  padding: 0.5rem 1rem;
+  width: 350px;
 }
 
 .search input {
   border: none;
   background-color: transparent;
-  width: 100%;
   outline: none;
+  width: 100%;
+  margin-right: 20px;
 }
 
-.login-btn {
-  margin: 0 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
+.search .btn {
+  background: transparent;
   border: none;
-  background-color: #5daa69;
-  color: #fff;
-  font-size: 1rem;
   cursor: pointer;
+  color: #333;
+  font-size: 1.2rem;
 }
 
-.login-btn:hover {
-  background-color: #4a8c5a;
-}
-
-.cart {
-  background-color: #000;
-  color: #fff;
+.mobile-search {
+  color: #333;
+  cursor: pointer;
+  background-color: #dfeee1;
   padding: 0.5rem 0.8rem;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
+  display: none; /* Hidden by default */
+}
+
+.mobile-search button {
+  background-color: transparent;
+  border: none;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.user-actions a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  font-weight: 500;
+}
+.user-actions a:hover {
+  color: #5daa69;
+}
+
+.user-actions a i {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
 }
 
 .hero {
@@ -210,6 +219,7 @@ ul a:focus {
   font-size: 1rem;
   background-color: #5daa69;
   color: white;
+  text-decoration: none;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -218,23 +228,6 @@ ul a:focus {
 
 .hero-overlay .btn:hover {
   background-color: #4a8c5a;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .hero {
-    height: 220px;
-  }
-  .hero-overlay {
-    padding: 12px 10px;
-    max-width: 90%;
-  }
-  .hero-overlay h1 {
-    font-size: 1.2rem;
-  }
-  .hero-overlay p {
-    font-size: 0.9rem;
-  }
 }
 
 .featured-products {
@@ -672,4 +665,63 @@ footer .copyright {
   font-size: 0.8rem;
   color: #ccc;
   margin-top: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .nav-links ul {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    padding: 1rem 0;
+    display: none;
+  }
+
+  .nav-links i {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 820px) {
+  .search {
+    display: none;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 160px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 200px;
+    padding: 1rem 0;
+    display: none;
+  }
+  .mobile-search {
+    display: block; /* Show the mobile search button */
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 220px;
+  }
+  .hero-overlay {
+    padding: 12px 10px;
+    max-width: 90%;
+  }
+  .hero-overlay h1 {
+    font-size: 1.2rem;
+  }
+  .hero-overlay p {
+    font-size: 0.9rem;
+  }
 }

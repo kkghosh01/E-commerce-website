@@ -16,39 +16,46 @@
   <body>
     <!-- Header & nav section -->
     <header id="main-header">
-      <nav>
-        <div>
-          <a href="#"><img src="./img/logo.png" alt="" /></a>
+      <div class="header-container">
+        <div class="header-left">
+          <div class="logo">
+            <a href="#"><img src="./img/logo.png" alt="Logo" /></a>
+          </div>
         </div>
-        <div class="nav-bar">
+        <nav class="nav-links">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Category</a></li>
             <li><a href="#">Products</a></li>
           </ul>
+          <i class="fa-solid fa-bars"></i>
+        </nav>
+        <div class="header-right">
+          <div class="mobile-search">
+            <button class="mobile-search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
           <div class="search">
             <button type="submit" class="btn">
               <i class="fas fa-search"></i>
             </button>
             <input type="text" placeholder="Search..." />
           </div>
-        </div>
-        <div class="user">
-          <div>
-            <select name="language" id="language">
-              <option value="en">En</option>
-              <option value="es">Es</option>
-              <option value="fr">Fr</option>
-              <option value="de">De</option>
-            </select>
-          </div>
-          <div>
-            <a href="#" class="sign-up-btn">Sign up</a>
-            <a href="#" class="login-btn">Login</a>
-            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
+
+          <div class="user-actions">
+            <a href="#" class="profile"
+              ><i class="fa-regular fa-user"></i>Profile</a
+            >
+            <a href="#" class="wish-list"
+              ><i class="fa-regular fa-heart"></i>Wish list</a
+            >
+            <a href="#" class="cart"
+              ><i class="fa-solid fa-cart-shopping"></i>Cart</a
+            >
           </div>
         </div>
-      </nav>
+      </div>
     </header>
 
     <!-- Hero section -->
