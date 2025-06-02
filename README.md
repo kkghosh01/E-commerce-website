@@ -4,9 +4,7 @@ A fully responsive e-commerce website built with **HTML**, **CSS**, and **JavaSc
 
 ## 🚀 Live Preview
 
-🔗 [View Live Site](https://kkghosh01.github.io/E-commerce-website)
-
-> (Make sure GitHub Pages is enabled from your repo's settings under the `gh-pages` branch or root if using `main`.)
+🔗 [View Live Site](https://kkghosh01.github.io/E-commerce-website/)
 
 ---
 
@@ -53,9 +51,9 @@ E-commerce-website/
 
 ## 📸 Screenshots
 
-| Desktop View | Tab View | Mobile View |
+| Desktop View | Mobile View | Tablet View |
 |--------------|-------------|-------------|
-| ![Desktop Screenshot](assets/screenshot-desktop.png) | ![Tab Screenshot](assets/screenshot-tab.png) | ![Mobile Screenshot](assets/screenshot-mobile.png) |
+| ![Desktop Screenshot](assets/screenshot-desktop.png) | ![Tab Screenshot](assets/Screenshot-tab.png) | ![Mobile Screenshot](assets/screenshot-mobile.png) |
 
 > Replace the above paths with your actual screenshots if available.
 
