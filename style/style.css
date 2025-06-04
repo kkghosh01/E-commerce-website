@@ -131,6 +131,21 @@ header {
   margin-bottom: 0.2rem;
 }
 
+.cart span {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  background-color: #5daa69;
+  color: #fff;
+  padding: 1px 7px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.hiden {
+  display: none;
+}
+
 .hero {
   position: relative;
   max-width: 90%;
@@ -353,6 +368,10 @@ header {
   padding: 0.2rem 0.5rem;
   border-radius: 5px;
   font-size: 0.8rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .new-arrival-card img {

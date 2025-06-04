@@ -1,6 +1,11 @@
 import observeOnScroll from "./scrollObserver.js";
+import handleCartCount from "./controllers/cartController.js";
+import { products } from "./products.js";
 const menuIcon = document.querySelector(".nav-links i");
 const navMenu = document.querySelector(".nav-links ul");
+const newArrivalContainer = document.querySelector(".new-arrival-grid");
+const topRatedContainer = document.querySelector(".top-rated-grid");
+const discountSpan = document.querySelectorAll(".discount");
 
 let prevScrollPos = window.pageYOffset;
 const header = document.getElementById("main-header");
@@ -24,6 +29,53 @@ window.addEventListener("scroll", function () {
   }, 150);
 });
 
+menuIcon.addEventListener("click", (e) => {
+  e.stopPropagation();
+  navMenu.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
+    navMenu.classList.remove("active");
+  }
+});
+
+let newArrivalHTML = "";
+let topRatedHTML = "";
+
+products.forEach((product) => {
+  newArrivalHTML += `<div class="new-arrival-card">
+          <div class="favourite-icon">
+            <button class="favourite-btn">❤️</button>
+          </div>
+          <img
+            src="${product.image}"
+            alt="${product.name.newArrival}"
+          />
+          <span class="discount ${!product.discount ? "hidden" : ""}">
+            ${product.discount || ""}
+          </span>
+          <h3>${product.name.newArrival}</h3>
+          <p>${product.price}</p>
+          <button class="btn">Add to Cart</button>
+        </div>`;
+  topRatedHTML += ` <div class="top-rated-card">
+          <img
+            src="${product.image}"
+            alt="${product.name.topRated}"
+          />
+          <h3>${product.name.topRated}</h3>
+          <div class="star-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
+          <p>${product.price}</p>
+          <button class="btn">Add to Cart</button>
+        </div>`;
+});
+
+newArrivalContainer.innerHTML = newArrivalHTML;
+topRatedContainer.innerHTML = topRatedHTML;
+
 observeOnScroll({
   selectors: [
     ".hero",
@@ -39,13 +91,4 @@ observeOnScroll({
   stagger: true,
 });
 
-menuIcon.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navMenu.classList.toggle("active");
-});
-
-document.addEventListener("click", (e) => {
-  if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
-    navMenu.classList.remove("active");
-  }
-});
+handleCartCount();
