@@ -1,11 +1,12 @@
 import observeOnScroll from "./scrollObserver.js";
 import handleCartCount from "./controllers/cartController.js";
 import { products } from "./products.js";
+import { categoryProducts } from "./products.js";
 const menuIcon = document.querySelector(".nav-links i");
 const navMenu = document.querySelector(".nav-links ul");
 const newArrivalContainer = document.querySelector(".new-arrival-grid");
 const topRatedContainer = document.querySelector(".top-rated-grid");
-const discountSpan = document.querySelectorAll(".discount");
+const categoryContainer = document.querySelector(".product-grid");
 
 let prevScrollPos = window.pageYOffset;
 const header = document.getElementById("main-header");
@@ -38,6 +39,16 @@ document.addEventListener("click", (e) => {
   if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
     navMenu.classList.remove("active");
   }
+});
+
+let categoryHTML = "";
+categoryProducts.forEach((category) => {
+  categoryHTML += `<div class="product-card">
+          <img src="${category.image}" alt="Product 1" />
+          <h3>${category.name}</h3>
+          <p>${category.price}</p>
+          <button class="btn">Add to Cart</button>
+        </div>`;
 });
 
 let newArrivalHTML = "";
@@ -73,6 +84,7 @@ products.forEach((product) => {
         </div>`;
 });
 
+categoryContainer.innerHTML = categoryHTML;
 newArrivalContainer.innerHTML = newArrivalHTML;
 topRatedContainer.innerHTML = topRatedHTML;
 

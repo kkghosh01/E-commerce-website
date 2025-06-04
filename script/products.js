@@ -89,3 +89,48 @@ export const products = [
     price: 24.99,
   },
 ];
+
+export const categoryProducts = [
+  {
+    id: 1,
+    name: "Category Product 1",
+    image: "./img/product-img/product1.jpg",
+    price: 29.99,
+  },
+  {
+    id: 2,
+    name: "Category Product 2",
+    image: "./img/product-img/product2.jpg",
+    price: 34.99,
+  },
+  {
+    id: 3,
+    name: "Category Product 3",
+    image: "./img/product-img/product3.jpg",
+    price: 39.99,
+  },
+  {
+    id: 4,
+    name: "Category Product 4",
+    image: "./img/product-img/product2.jpg",
+    price: 24.99,
+  },
+  {
+    id: 5,
+    name: "Category Product 5",
+    image: "./img/product-img/product3.jpg",
+    price: 19.99,
+  },
+  {
+    id: 6,
+    name: "Category Product 6",
+    image: "./img/product-img/product1.jpg",
+    price: 49.99,
+  },
+  {
+    id: 7,
+    name: "Category Product 7",
+    image: "./img/product-img/product3.jpg",
+    price: 49.99,
+  },
+];
