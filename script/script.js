@@ -19,7 +19,7 @@ categoryProducts.forEach((category) => {
           <img src="${category.image}" alt="Product 1" />
           <h3>${category.name}</h3>
           <p>${category.price}</p>
-          <button class="btn">Add to Cart</button>
+          <button class="btn" data-product-id="${category.id}">Add to Cart</button>
         </div>`;
 });
 
@@ -54,7 +54,7 @@ products.forEach((product) => {
             <span>★ ★ ★ ★ ☆</span>
           </div>
           <p>${product.price}</p>
-          <button class="btn">Add to Cart</button>
+          <button class="btn" data-product-id="${product.id}">Add to Cart</button>
         </div>`;
 });
 
