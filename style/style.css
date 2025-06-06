@@ -218,7 +218,7 @@ header {
 .hero-overlay .btn {
   padding: 10px 24px;
   font-size: 1rem;
-  background-color: #5daa69;
+  background-color: #4caf50;
   color: white;
   text-decoration: none;
   display: inline-block;
@@ -229,7 +229,7 @@ header {
 }
 
 .hero-overlay .btn:hover {
-  background-color: #4a8c5a;
+  background-color: #45a049;
 }
 
 .featured-products {
@@ -251,7 +251,7 @@ header {
 }
 .featured-header button i {
   font-size: 1.2rem;
-  color: #5daa69;
+  color: #4caf50;
 }
 .featured-products h2 {
   font-size: 2rem;
@@ -292,16 +292,16 @@ header {
 }
 
 .product-card .btn {
-  background-color: #5daa69;
+  background-color: #4caf50;
   color: #fff;
   padding: 0.2rem 0.7rem;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .product-card .btn:hover {
-  background-color: #4a8c5a;
+  background-color: #45a049;
 }
 
 .new-arrivals-section {
@@ -380,16 +380,18 @@ header {
 }
 
 .new-arrival-card .btn {
-  background-color: #5daa69;
+  background-color: #4caf50;
   color: #fff;
   padding: 0.2rem 0.7rem;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 .new-arrival-card .btn:hover {
-  background-color: #4a8c5a;
+  background-color: #45a049;
 }
 
 .product-banner {
@@ -469,16 +471,18 @@ header {
   border-radius: 10px;
 }
 .top-rated-products .top-rated-card .btn {
-  background-color: #5daa69;
+  background-color: #4caf50;
   color: #fff;
   padding: 0.2rem 0.7rem;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 .top-rated-products .top-rated-card .btn:hover {
-  background-color: #4a8c5a;
+  background-color: #45a049;
 }
 
 .star-rating span {
@@ -581,13 +585,13 @@ footer {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   border: none;
-  background-color: #5daa69;
+  background-color: #4caf50;
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
 }
 .footer-card .news-letter-subscription button:hover {
-  background-color: #4a8c5a;
+  background-color: #45a049;
 }
 
 .social-media ul {

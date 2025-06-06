@@ -2,45 +2,17 @@ import observeOnScroll from "./scrollObserver.js";
 import handleCartCount from "./controllers/cartController.js";
 import { products } from "./products.js";
 import { categoryProducts } from "./products.js";
-const menuIcon = document.querySelector(".nav-links i");
-const navMenu = document.querySelector(".nav-links ul");
+import { handleNavbar } from "./controllers/navbarController.js";
+import { updateCartCount } from "./utility/utility.js";
 const newArrivalContainer = document.querySelector(".new-arrival-grid");
 const topRatedContainer = document.querySelector(".top-rated-grid");
 const categoryContainer = document.querySelector(".product-grid");
 
-let prevScrollPos = window.pageYOffset;
-const header = document.getElementById("main-header");
-let isScrolling;
+// Initialize the navbar functionality
+// and handle the scroll behavior
+handleNavbar();
 
-window.addEventListener("scroll", function () {
-  let currentScrollPos = window.pageYOffset;
-
-  if (prevScrollPos > currentScrollPos) {
-    header.style.top = "0";
-  } else {
-    header.style.top = "-100px";
-  }
-
-  prevScrollPos = currentScrollPos;
-
-  window.clearTimeout(isScrolling);
-
-  isScrolling = setTimeout(function () {
-    header.style.top = "0";
-  }, 150);
-});
-
-menuIcon.addEventListener("click", (e) => {
-  e.stopPropagation();
-  navMenu.classList.toggle("active");
-});
-
-document.addEventListener("click", (e) => {
-  if (!navMenu.contains(e.target) && !menuIcon.contains(e.target)) {
-    navMenu.classList.remove("active");
-  }
-});
-
+// Generate HTML for categories, new arrivals, and top-rated products
 let categoryHTML = "";
 categoryProducts.forEach((category) => {
   categoryHTML += `<div class="product-card">
@@ -68,7 +40,9 @@ products.forEach((product) => {
           </span>
           <h3>${product.name.newArrival}</h3>
           <p>${product.price}</p>
-          <button class="btn">Add to Cart</button>
+          <button class="btn" data-product-id="${
+            product.id
+          }">Add to Cart</button>
         </div>`;
   topRatedHTML += ` <div class="top-rated-card">
           <img
@@ -88,6 +62,7 @@ categoryContainer.innerHTML = categoryHTML;
 newArrivalContainer.innerHTML = newArrivalHTML;
 topRatedContainer.innerHTML = topRatedHTML;
 
+// Observe elements on scroll to add animations
 observeOnScroll({
   selectors: [
     ".hero",
@@ -103,4 +78,7 @@ observeOnScroll({
   stagger: true,
 });
 
+// Handle cart count updates
 handleCartCount();
+
+updateCartCount();

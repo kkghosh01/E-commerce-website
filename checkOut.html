@@ -11,7 +11,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./style/style.css" />
-    <title>E-store</title>
+    <link rel="stylesheet" href="./style/checkOut.css" />
+    <title>estore.com shopping cart</title>
   </head>
   <body>
     <!-- Header & nav section -->
@@ -19,12 +20,12 @@
       <div class="header-container">
         <div class="header-left">
           <div class="logo">
-            <a href="index.html"><img src="./img/logo.png" alt="Logo" /></a>
+            <a href="/index.html"><img src="./img/logo.png" alt="Logo" /></a>
           </div>
         </div>
         <nav class="nav-links">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li><a href="#">Category</a></li>
             <li><a href="#">Products</a></li>
           </ul>
@@ -45,7 +46,7 @@
             <a href="#" class="wish-list"
               ><i class="fa-regular fa-heart"></i>Wish list</a
             >
-            <a href="checkOut.html" class="cart"
+            <a href="#" class="cart"
               ><span class="cart-items hiden"></span
               ><i class="fa-solid fa-cart-shopping"></i>Cart</a
             >
@@ -53,48 +54,52 @@
         </div>
       </div>
     </header>
+    <!-- cart product item section -->
+    <section class="cart-section">
+      <div class="left-section">
+        <h2>Shopping Bag</h2>
+        <p class="cart-items-count"><span>2 items</span> in your bag</p>
+        <div class="cart-container">
+          <div class="product-header">
+            <h3>Product</h3>
+            <h3>Quantity</h3>
+            <h3>Price</h3>
+          </div>
+          <div class="product-container"></div>
 
-    <!-- Hero section -->
-
-    <section class="hero">
-      <div class="hero-image">
-        <img src="./img/hero.png" alt="Hero Image" />
-        <div class="hero-overlay">
-          <h1>Welcome to Our E-store</h1>
-          <p>Discover the best products at unbeatable prices!</p>
-          <a href="#" class="btn">Shop Now</a>
+          <div class="cart-total">
+            <h3>Subtotal <span>(2 items)</span>: $39.98</h3>
+          </div>
+        </div>
+      </div>
+      <div class="right-section">
+        <h2>Order Summary</h2>
+        <div class="summary-container">
+          <div class="summary-item">
+            <p class="title">Items total</p>
+            <p class="value">$39.98</p>
+          </div>
+          <div class="summary-item">
+            <p class="title">Items discount</p>
+            <p class="discount">0</p>
+          </div>
+          <div class="summary-item">
+            <p>Subtotal</p>
+            <p>$39.98</p>
+          </div>
+          <div class="summary-item">
+            <p>Shipping</p>
+            <p>Free</p>
+          </div>
+          <div class="summary-item">
+            <p class="total">Estimated total</p>
+            <p class="total">$39.98</p>
+          </div>
+          <button class="checkout-btn">Checkout</button>
         </div>
       </div>
     </section>
-    <!-- Featured Products section -->
-    <section class="featured-products">
-      <div class="featured-header">
-        <h2>Browse by category</h2>
-        <div>
-          <button><i class="fas fa-chevron-left"></i></button>
-          <button><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
 
-      <div class="product-grid"></div>
-    </section>
-    <!-- new arrival section -->
-
-    <section class="new-arrivals-section">
-      <h2>New arrival</h2>
-      <div class="new-arrival-grid"></div>
-    </section>
-    <section class="product-banner">
-      <img
-        src="./img/product-banner-img/product-banner.png"
-        alt="Product Banner"
-      />
-    </section>
-    <!-- top rated product -->
-    <section class="top-rated-products">
-      <h2>Top Rated Products</h2>
-      <div class="top-rated-grid"></div>
-    </section>
     <!-- Footer section -->
     <section>
       <div class="tag-lines">
@@ -188,6 +193,6 @@
         </p>
       </footer>
     </section>
-    <script type="module" src="./script/script.js"></script>
+    <script type="module" src="script/checkOut.js"></script>
   </body>
 </html>
