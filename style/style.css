@@ -2,12 +2,30 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  background-color: #fff;
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #f0f0f0;
+  color: #333;
+  width: 100%;
+  margin: 0 auto;
   color: #000;
 }
 h1 {
@@ -18,17 +36,20 @@ h1 {
 header {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  align-items: center;
   background-color: #fff;
   padding: 1rem 2rem;
   border-bottom: 1px solid #ccc;
   z-index: 999;
+  transition: top 0.3s ease-in-out;
 }
+
 .header-left {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .header-container {
@@ -51,8 +72,9 @@ header {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 70px;
+  top: 45px;
   left: 0;
+  right: 0;
   width: 100%;
   background-color: #fff;
   padding: 1rem 0;
@@ -61,7 +83,7 @@ header {
   z-index: 1000;
 }
 
-.nav-links i {
+.header-left i {
   display: none;
 }
 
@@ -107,8 +129,20 @@ header {
   font-size: 1.2rem;
 }
 
+.mobile-search {
+  display: none;
+}
+
+.mobile-search i {
+  display: none;
+}
+
 .user-actions {
+  position: relative;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
   align-items: center;
   gap: 3rem;
 }
@@ -131,10 +165,18 @@ header {
   margin-bottom: 0.2rem;
 }
 
+.cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
 .cart span {
   position: absolute;
-  top: 5px;
-  right: 50px;
+  top: -8px;
+  right: 15px;
   background-color: #5daa69;
   color: #fff;
   padding: 1px 7px;
@@ -539,6 +581,8 @@ footer {
 .footer-content {
   display: flex;
   justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
   gap: 2rem;
   padding: 2.5rem 0;
 }
@@ -683,6 +727,9 @@ footer {
   align-items: center;
   gap: 0.5rem;
 }
+input[type="email"] {
+  width: 100%;
+}
 
 footer .copyright {
   text-align: center;
@@ -695,8 +742,9 @@ footer .copyright {
   .nav-links ul {
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 45px;
     left: 0;
+    right: 0;
     justify-content: center;
     align-items: center;
     background-color: #fff;
@@ -705,7 +753,7 @@ footer .copyright {
     display: none;
   }
 
-  .nav-links i {
+  .header-left i {
     display: block;
     font-size: 1.5rem;
     cursor: pointer;
@@ -731,20 +779,33 @@ footer .copyright {
   }
 }
 
+@media (max-width: 1024px) {
+  .product-banner {
+    height: 280px;
+  }
+
+  .product-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 @media (max-width: 820px) {
   .search {
-    width: 200px;
+    max-width: 200px;
   }
 
   .nav-links ul {
     flex-direction: column;
     position: absolute;
-    top: 70px;
-    left: 160px;
+    top: 45px;
+    left: 0;
+    right: 0;
+    width: 100%;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    width: 200px;
     padding: 1rem 0;
     display: none;
   }
@@ -775,15 +836,54 @@ footer .copyright {
 
 @media (max-width: 600px) {
   .search {
-    position: absolute;
-    top: 60px;
-    width: 90%;
-    left: 5%;
-    padding: 0.2rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    display: none;
+    max-width: none;
   }
 
+  .mobile-search {
+    display: block;
+  }
+
+  .mobile-search i {
+    display: block;
+    font-size: 1rem;
+    margin-top: 5px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  /* When .search has .active in mobile, show it below header */
+  .search.active {
+    display: flex;
+    position: absolute;
+    top: 60px; /* adjust as needed below header */
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    background-color: #dfeee1;
+    border: 1px solid #ccc;
+    z-index: 999;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .search input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    outline: none;
+  }
+
+  .search .btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+  }
   .hero-overlay {
     top: 20%;
     left: 5px;
@@ -908,7 +1008,7 @@ footer .copyright {
     padding: 0.5rem;
   }
   .social-media ul {
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   .social-media ul li {
