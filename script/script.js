@@ -36,7 +36,7 @@ products.forEach((product) => {
             alt="${product.name.newArrival}"
           />
           <span class="discount ${!product.discount ? "hidden" : ""}">
-            ${product.discount || ""}
+            ${product.discount || ""}% OFF
           </span>
           <h3>${product.name.newArrival}</h3>
           <p>${product.price}</p>

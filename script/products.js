@@ -10,14 +10,14 @@ export const products = [
     name: { newArrival: "New Arrival 2", topRated: "Top Rated 2" },
     image: "img/new-product-img/new-product-2.jpg",
     price: 34.99,
-    discount: "15% off",
+    discount: 15,
   },
   {
     id: 3,
     name: { newArrival: "New Arrival 3", topRated: "Top Rated 3" },
     image: "img/new-product-img/new-product-3.jpg",
     price: 39.99,
-    discount: "10% off",
+    discount: 10,
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ export const products = [
     name: { newArrival: "New Arrival 6", topRated: "Top Rated 6" },
     image: "img/new-product-img/new-product-6.jpg",
     price: 49.99,
-    discount: "5% off",
+    discount: 5,
   },
   {
     id: 7,
@@ -55,7 +55,7 @@ export const products = [
     name: { newArrival: "New Arrival 9", topRated: "Top Rated 9" },
     image: "img/new-product-img/new-product-9.jpg",
     price: 39.99,
-    discount: "20% off",
+    discount: 20,
   },
   {
     id: 10,
@@ -80,7 +80,7 @@ export const products = [
     name: { newArrival: "New Arrival 13", topRated: "Top Rated 13" },
     image: "img/new-product-img/new-product-10.jpg",
     price: 39.99,
-    discount: "15% off",
+    discount: 15,
   },
   {
     id: 14,

@@ -1,5 +1,6 @@
 import { products } from "../products.js";
-import { cart } from "../cart.js";
+import { getCart } from "../cart.js";
+const cart = getCart();
 
 export default function handleCartCount() {
   const addToCartBtn = document.querySelectorAll(".btn");

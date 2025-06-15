@@ -633,6 +633,7 @@ footer {
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
+  margin-top: 5px;
 }
 .footer-card .news-letter-subscription button:hover {
   background-color: #45a049;
