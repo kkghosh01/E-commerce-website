@@ -15,13 +15,16 @@ handleNavbar();
 // Generate HTML for categories, new arrivals, and top-rated products
 let categoryHTML = "";
 categoryProducts.forEach((category) => {
-  categoryHTML += `<div class="product-card">
-          <img src="${category.image}" alt="Product 1" />
-          <h3>${category.name}</h3>
-          <p>${category.price}</p>
-          <button class="btn" data-product-id="${category.id}">Add to Cart</button>
+  categoryHTML += `
+        <div class="swiper-slide">
+          <div class="product-card">
+            <img src="${category.image}" alt="${category.name}" />
+            <h3>${category.name}</h3>
+          </div>
         </div>`;
 });
+
+document.getElementById("category-slider").innerHTML = categoryHTML;
 
 let newArrivalHTML = "";
 let topRatedHTML = "";
@@ -58,7 +61,6 @@ products.forEach((product) => {
         </div>`;
 });
 
-categoryContainer.innerHTML = categoryHTML;
 newArrivalContainer.innerHTML = newArrivalHTML;
 topRatedContainer.innerHTML = topRatedHTML;
 
@@ -82,3 +84,52 @@ observeOnScroll({
 handleCartCount();
 
 updateCartCount();
+
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: { slidesPerView: 2.5 },
+    480: { slidesPerView: 3 },
+    600: { slidesPerView: 3.5 },
+    700: { slidesPerView: 4 },
+    900: { slidesPerView: 4.5 },
+    1000: { slidesPerView: 5 },
+    1100: { slidesPerView: 5.5 },
+    1250: { slidesPerView: 6 },
+    1400: { slidesPerView: 7 },
+    1600: { slidesPerView: 8 },
+  },
+});
+
+new Swiper("#swiper-image", {
+  effect: "fade",
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+});

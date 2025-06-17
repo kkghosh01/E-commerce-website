@@ -226,7 +226,7 @@ body {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   width: 100%;
   font-size: 1rem;
@@ -453,5 +453,11 @@ body {
     grid-area: action;
     justify-self: center;
     align-self: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .total-mobile h3 {
+    font-size: 1rem;
   }
 }

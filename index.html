@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./style/style.css" />
     <title>E-store</title>
@@ -61,30 +63,48 @@
     <!-- Hero section -->
 
     <section class="hero">
-      <div class="hero-image">
-        <img src="./img/hero.png" alt="Hero Image" />
-        <div class="hero-overlay">
-          <h1>Welcome to Our E-store</h1>
-          <p>Discover the best products at unbeatable prices!</p>
-          <a href="#" class="btn">Shop Now</a>
+      <div class="swiper" id="swiper-image">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/hero-img/hero-one.png" alt="Hero Image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/hero-img/hero-two.png" alt="Hero Image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/hero-img/hero-three.png" alt="Hero Image" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/hero-img/hero-four.png" alt="Hero Image" />
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
     <!-- Featured Products section -->
     <section class="featured-products">
       <div class="featured-header">
         <h2>Browse by category</h2>
-        <div>
-          <button><i class="fas fa-chevron-left"></i></button>
-          <button><i class="fas fa-chevron-right"></i></button>
-        </div>
       </div>
 
-      <div class="product-grid"></div>
+      <div class="swiper-container-wrap">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper" id="category-slider">
+            <!-- Slides will be injected here -->
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
     </section>
     <!-- new arrival section -->
 
     <section class="new-arrivals-section">
+      <div class="added-to-cart">✔️ Added to Cart</div>
+
       <h2>New arrival</h2>
       <div class="new-arrival-grid"></div>
     </section>
@@ -192,6 +212,7 @@
         </p>
       </footer>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script type="module" src="./script/script.js"></script>
   </body>
 </html>
