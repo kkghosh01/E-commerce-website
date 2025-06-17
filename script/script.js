@@ -18,7 +18,7 @@ categoryProducts.forEach((category) => {
   categoryHTML += `
         <div class="swiper-slide">
           <div class="product-card">
-            <img src="${category.image}" alt="${category.name}" />
+            <img src="${category.image}" loading="lazy" fetchpriority="high" alt="${category.name}" />
             <h3>${category.name}</h3>
           </div>
         </div>`;
