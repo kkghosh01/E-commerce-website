@@ -66,43 +66,63 @@
       <div class="swiper" id="swiper-image">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img
-              src="./img/hero-img/hero-one.png"
-              loading="lazy"
-              fetchpriority="high"
-              alt="Hero Image"
-            />
+            <picture>
+              <source srcset="./img/hero-img/hero-one.webp" type="image/webp" />
+              <img
+                src="./img/hero-img/hero-one.jpg"
+                loading="eager"
+                fetchpriority="high"
+                alt="Hero Image 1"
+              />
+            </picture>
           </div>
           <div class="swiper-slide">
-            <img
-              src="./img/hero-img/hero-two.png"
-              loading="lazy"
-              fetchpriority="high"
-              alt="Hero Image"
-            />
+            <picture>
+              <source srcset="./img/hero-img/hero-two.webp" type="image/webp" />
+              <img
+                src="./img/hero-img/hero-two.jpg"
+                loading="eager"
+                fetchpriority="high"
+                alt="Hero Image 2"
+              />
+            </picture>
           </div>
           <div class="swiper-slide">
-            <img
-              src="./img/hero-img/hero-three.png"
-              loading="lazy"
-              fetchpriority="high"
-              alt="Hero Image"
-            />
+            <picture>
+              <source
+                srcset="./img/hero-img/hero-three.webp"
+                type="image/webp"
+              />
+              <img
+                src="./img/hero-img/hero-three.jpg"
+                loading="eager"
+                fetchpriority="high"
+                alt="Hero Image 3"
+              />
+            </picture>
           </div>
           <div class="swiper-slide">
-            <img
-              src="./img/hero-img/hero-four.png"
-              loading="lazy"
-              fetchpriority="high"
-              alt="Hero Image"
-            />
+            <picture>
+              <source
+                srcset="./img/hero-img/hero-four.webp"
+                type="image/webp"
+              />
+              <img
+                src="./img/hero-img/hero-four.jpg"
+                loading="eager"
+                fetchpriority="high"
+                alt="Hero Image 4"
+              />
+            </picture>
           </div>
         </div>
+
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
     </section>
+
     <!-- Featured Products section -->
     <section class="featured-products">
       <div class="featured-header">

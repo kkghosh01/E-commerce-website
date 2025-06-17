@@ -253,7 +253,13 @@ header {
   align-items: flex-start; */
 }
 
-.hero img {
+.hero .swiper-slide picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -261,7 +267,6 @@ header {
   display: block;
   border-radius: 15px;
 }
-
 #swiper-image .swiper-pagination {
   position: absolute;
   bottom: 50px;

@@ -15,13 +15,19 @@ handleNavbar();
 // Generate HTML for categories, new arrivals, and top-rated products
 let categoryHTML = "";
 categoryProducts.forEach((category) => {
+  // Get image path without extension (assuming both .webp and .jpg exist with same name)
+  const baseImagePath = category.image.replace(/\.(jpg|jpeg|png|webp)$/i, "");
+
   categoryHTML += `
-        <div class="swiper-slide">
-          <div class="product-card">
-            <img src="${category.image}" loading="lazy" fetchpriority="high" alt="${category.name}" />
-            <h3>${category.name}</h3>
-          </div>
-        </div>`;
+    <div class="swiper-slide">
+      <div class="product-card">
+        <picture>
+          <source srcset="${baseImagePath}.webp" type="image/webp" />
+          <img src="${baseImagePath}.jpg" loading="eager" fetchpriority="high" alt="${category.name}" />
+        </picture>
+        <h3>${category.name}</h3>
+      </div>
+    </div>`;
 });
 
 document.getElementById("category-slider").innerHTML = categoryHTML;
@@ -116,7 +122,6 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 new Swiper("#swiper-image", {
-  effect: "fade",
   slidesPerView: 1,
   spaceBetween: 10,
   loop: true,
