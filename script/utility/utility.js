@@ -1,8 +1,6 @@
-// utility.js
-
 import { getCart, setCart } from "../cart.js";
 
-// ✅ Update cart item count in header
+// Update cart item count in header
 export function updateCartCount() {
   const cart = getCart();
   const cartCount = document.querySelector(".cart-items");
@@ -15,7 +13,7 @@ export function updateCartCount() {
   }
 }
 
-// ✅ Update order summary (right sidebar + mobile + cart subtotal)
+// Update order summary (right sidebar + mobile + cart subtotal)
 export function updateOrderSummary() {
   const cart = getCart();
   const cartSectionRight = document.querySelector(".right-section");
@@ -49,7 +47,7 @@ export function updateOrderSummary() {
   )}</h3>
   `;
 
-  // ✅ Full order summary (desktop)
+  // Full order summary (desktop)
   if (cartSectionRight) {
     cartSectionRight.innerHTML = `
       <h2>Order Summary</h2>
@@ -79,12 +77,12 @@ export function updateOrderSummary() {
     `;
   }
 
-  // ✅ Desktop subtotal (above item list)
+  // Desktop subtotal (above item list)
   if (cartTotal) {
     cartTotal.innerHTML = subtotalHTML;
   }
 
-  // ✅ Mobile view estimated total only
+  // Mobile view estimated total only
   if (mobileCartTotal) {
     mobileCartTotal.innerHTML = `
       <h3>Estimated Total (${itemCount} items): $${estimatedTotal.toFixed(
@@ -94,13 +92,13 @@ export function updateOrderSummary() {
     `;
   }
 
-  // ✅ Shopping bag text
+  // Shopping bag text
   if (soppingBagItems) {
     soppingBagItems.textContent = `(${itemCount}) items in your bag`;
   }
 }
 
-// ✅ Generate HTML for cart items
+// Generate HTML for cart items
 export function generateCartItemsHTML() {
   const cart = getCart();
   const cartSection = document.querySelector(".cart-section");
@@ -157,7 +155,7 @@ export function generateCartItemsHTML() {
     .join("");
 }
 
-// ✅ Quantity button handlers
+// Quantity button handlers
 export function updateQuantityButtons() {
   const cart = getCart();
   const productContainer = document.querySelector(".product-container");
@@ -190,10 +188,9 @@ export function updateQuantityButtons() {
       }
     });
   });
-  console.log(cart);
 }
 
-// ✅ Remove item button handlers
+// Remove item button handlers
 export function setupRemoveButtons() {
   const cart = getCart();
   const productContainer = document.querySelector(".product-container");
@@ -201,17 +198,47 @@ export function setupRemoveButtons() {
   if (!productContainer) return;
 
   const removeButtons = productContainer.querySelectorAll(".remove-btn");
+  const modal = document.getElementById("remove-modal");
+  const cancelBtn = modal.querySelector(".cancel-btn");
+  const confirmBtn = modal.querySelector(".confirm-btn");
+
+  let itemIndexToRemove = null;
+
+  // Utility functions to show/hide modal
+  const showModal = () => {
+    modal.classList.remove("hidden");
+    setTimeout(() => modal.classList.add("show"), 10); // fade-in effect
+  };
+
+  const hideModal = () => {
+    modal.classList.remove("show"); // start fade-out
+    setTimeout(() => modal.classList.add("hidden"), 300); // after fade-out
+  };
 
   removeButtons.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      cart.splice(index, 1);
+      itemIndexToRemove = index;
+      showModal();
+    });
+  });
+
+  cancelBtn.addEventListener("click", () => {
+    hideModal();
+    itemIndexToRemove = null;
+  });
+
+  confirmBtn.addEventListener("click", () => {
+    if (itemIndexToRemove !== null) {
+      cart.splice(itemIndexToRemove, 1);
       setCart(cart);
       reRenderCartUI();
-    });
+      itemIndexToRemove = null;
+      hideModal();
+    }
   });
 }
 
-// ✅ Re-render cart UI completely
+// Re-render cart UI completely
 function reRenderCartUI() {
   const productContainer = document.querySelector(".product-container");
   if (!productContainer) return;
